@@ -14,29 +14,8 @@ const Characters = {
     Symbols: "~!@#$%^&*()_+{}[].,:;|",
   };
 
-  function CopyStrongPassword() {
-    const password = passwordInput.value;
-    if (password !== "") {
-      try {
-        navigator.clipboard.writeText(password)
-          .then(() => {
-            copySuccess.src = "https://www.pngitem.com/pimgs/b/11-110747_approval-icon-png.png"; 
-            setTimeout(() => {
-              copySuccess.src = "https://cdn0.iconfinder.com/data/icons/harmonicons-02/64/clipboard-1024.png";
-            }, 2000);
-          })
-          .catch(err => {
-            console.error("Failed to copy: ", err);
-            
-            alert("Failed to copy password to clipboard. Please try again.");
-          });
-      } catch (err) {
-        console.error("Clipboard API not supported or error:", err);
-        alert("Your browser may not support the clipboard API.");
-      }
-    }
-  }
-
+ 
+  https://www.pngitem.com/pimgs/b/11-110747_approval-icon-png.png
   generatePassword.addEventListener("click", generateStrongPassword);
 function generateStrongPassword() {
   let randomPassword = "",
